@@ -1,7 +1,30 @@
-import React from 'react';
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { IoMdArrowForward } from "react-icons/io";
+import { FiTrash2 } from "react-icons/fi";
+import { SidebarContext } from "../contexts/SidebarContext";
+import CartItem from "./CartItem";
 
 const Sidebar = () => {
-  return <div>Sidebar</div>;
+  const { isOpen, setIsOpen, handleClose } = useContext(SidebarContext);
+  //console.log(isOpen);
+  return (
+    <div
+      className={`${
+        isOpen ? "right-0" : "-right-full"
+      } w-full h-full fixed top-0 
+    md:w-[35vw] xl:w-[30vw] z-20 transition-all duration-300 
+    bg-orange-200 shadow-2xl transition-all 
+    duration-300 px-4 lg:px-[35px]`}
+    >
+      <div className="cursor-pointer w-8 h-8 flex justify-center items-center">
+        <div>Shopping bag (0)</div>
+        <div className="text-2xl">
+          <IoMdArrowForward />
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Sidebar;
