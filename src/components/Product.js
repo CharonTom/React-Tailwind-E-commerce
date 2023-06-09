@@ -41,7 +41,7 @@ const Product = ({ product }) => {
           <Link
             to={`product/${id}`}
             className="text-primary bg-white flex justify-center items-center
-             text-white w-12 h-12 drop-shadow-xl"
+             text-black w-12 h-12 drop-shadow-xl"
           >
             <BsEyeFill />
           </Link>

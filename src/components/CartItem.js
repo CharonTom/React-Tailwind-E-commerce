@@ -34,14 +34,20 @@ const CartItem = ({ item }) => {
           </div>
           <div className=" flex gap-x-2 h-[36px]">
             <div
-              className="flex flex-1 max-w-[100px] items-center h-full border
-             max-w-[100px] text-primary font-medium justify-between p-2"
+              className="flex flex-1 max-w-[100px] items-center border
+             max-w-[100px] text-primary font-medium justify-between "
             >
-              <div onClick={() => decreaseAmount(id)}>
+              <div
+                className="cursor-pointer  h-full flex-1 flex items-center justify-center"
+                onClick={() => decreaseAmount(id)}
+              >
                 <IoMdRemove />
               </div>
-              <div>{amount}</div>
+              <div className="flex-1 flex items-center justify-center">
+                {amount}
+              </div>
               <div
+                className="cursor-pointer  h-full flex-1 flex items-center justify-center"
                 onClick={() => {
                   increaseAmount(id);
                 }}

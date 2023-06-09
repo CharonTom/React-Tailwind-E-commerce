@@ -8,14 +8,14 @@ import { CartContext } from "../contexts/CartContext";
 
 const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext);
-  const { cart, clearCart } = useContext(CartContext);
+  const { cart, clearCart, total } = useContext(CartContext);
 
   return (
     <div
       className={`${
         isOpen ? "right-0" : "-right-full"
       } w-full h-full fixed top-0 
-    md:w-[35vw] xl:w-[30vw] z-20 transition-all duration-300 
+    md:w-[45vw] xl:w-[30vw] z-20 transition-all duration-300 
     bg-white shadow-2xl transition-all 
     duration-300 px-4 lg:px-[35px]`}
     >
@@ -30,25 +30,43 @@ const Sidebar = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div
+        className="flex flex-col gap-y-2 py-6 
+      h-[400px]  overflow-y-auto overflow-x-hidden 
+      "
+      >
         {cart.map((item) => {
           return <CartItem item={item} key={item.id} />;
         })}
       </div>
       <div className="gap-y-3 py-4">
         <div className=" flex justify-between items-center w-full">
-          <div className="font-semibold uppercase">
-            <span className="mr-2">Total Price :</span> $54484
+          <div className="font-semibold uppercase py-6">
+            <span className="mr-2">Total Price :</span>$
+            {parseFloat(total).toFixed(2)}
           </div>
           <div
             onClick={() => {
               clearCart();
             }}
-            className="cursor-pointer py-4 bg-red-500 text-white w-12 h-12 flex justify-center items-center text-xl"
+            className="cursor-pointer py-4 bg-red-500 text-white w-12 h-12 
+            flex justify-center items-center text-xl"
           >
             <FiTrash2 />
           </div>
         </div>
+        <Link
+          className="flex justify-center items-center bg-gray-200 p-4 mb-2 text-primary w-full font-medium"
+          to="/"
+        >
+          View Cart
+        </Link>
+        <Link
+          className="flex justify-center items-center bg-primary p-4 text-white w-full font-medium"
+          to="/"
+        >
+          Checkout
+        </Link>
       </div>
     </div>
   );
