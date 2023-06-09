@@ -8,7 +8,7 @@ import { CartContext } from "../contexts/CartContext";
 
 const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext);
-  const { cart, clearCart, total } = useContext(CartContext);
+  const { cart, clearCart, total, amountItem } = useContext(CartContext);
 
   return (
     <div
@@ -17,10 +17,12 @@ const Sidebar = () => {
       } w-full h-full fixed top-0 
     md:w-[45vw] xl:w-[30vw] z-20 transition-all duration-300 
     bg-white shadow-2xl transition-all 
-    duration-300 px-4 lg:px-[35px]`}
+    duration-300 px-4 lg:px-[35px] flex flex-col justify-between`}
     >
       <div className="flex items-center justify-between py-6 border-b">
-        <div className="uppercase text-sm font-semibold">Shopping bag (0)</div>
+        <div className="uppercase text-sm font-semibold">
+          Shopping bag ({amountItem})
+        </div>
         <div
           onClick={handleClose}
           className="cursor-pointer w-8 h-8 flex justify-center items-center"
@@ -31,8 +33,8 @@ const Sidebar = () => {
         </div>
       </div>
       <div
-        className="flex flex-col gap-y-2 py-6 
-      h-[400px]  overflow-y-auto overflow-x-hidden 
+        className="flex flex-col gap-y-2 
+      overflow-y-auto overflow-x-hidden 
       "
       >
         {cart.map((item) => {
@@ -55,12 +57,7 @@ const Sidebar = () => {
             <FiTrash2 />
           </div>
         </div>
-        <Link
-          className="flex justify-center items-center bg-gray-200 p-4 mb-2 text-primary w-full font-medium"
-          to="/"
-        >
-          View Cart
-        </Link>
+
         <Link
           className="flex justify-center items-center bg-primary p-4 text-white w-full font-medium"
           to="/"
