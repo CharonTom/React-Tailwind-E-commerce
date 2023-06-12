@@ -22,7 +22,7 @@ const Header = () => {
       } fixed w-full z-20 transition-all`}
     >
       <div className="container mx-auto flex items-center justify-between h-full">
-        <Link to={"/"}>
+        <Link to="/React-Tailwind-E-commerce">
           <div className="">
             <img className="w-[40px]" src={Logo} alt="" />
           </div>

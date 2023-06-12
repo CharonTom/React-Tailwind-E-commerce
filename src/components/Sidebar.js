@@ -60,7 +60,7 @@ const Sidebar = () => {
 
         <Link
           className="flex justify-center items-center bg-primary p-4 text-white w-full font-medium"
-          to="/"
+          to="/React-Tailwind-E-commerce"
         >
           Checkout
         </Link>
