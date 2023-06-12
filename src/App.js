@@ -13,7 +13,10 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/React-Tailwind-E-commerce" element={<Home />} />
-          <Route path="/product/:id" element={<ProductDetails />} />
+          <Route
+            path="/React-Tailwind-E-commerce/product/:id"
+            element={<ProductDetails />}
+          />
         </Routes>
         <Sidebar />
         <Footer />
