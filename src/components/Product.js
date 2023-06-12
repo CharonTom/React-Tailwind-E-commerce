@@ -39,7 +39,7 @@ const Product = ({ product }) => {
             </div>
           </button>
           <Link
-            to={`product/${id}`}
+            to={`/product/${id}`}
             className="text-primary bg-white flex justify-center items-center
              text-black w-12 h-12 drop-shadow-xl"
           >
@@ -49,7 +49,7 @@ const Product = ({ product }) => {
       </div>
       <div>
         <div className=" text-sm capitalize text-gray-600 mb-1">{category}</div>
-        <Link to={`product/${id}`}>
+        <Link to={`/product/${id}`}>
           <h2 className="font-semibold mb-1">{title}</h2>
         </Link>
         <div className="font-semibold">$ {price}</div>
