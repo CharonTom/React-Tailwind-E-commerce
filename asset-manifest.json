@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/React-Tailwind-E-commerce/static/css/main.503030f6.css",
-    "main.js": "/React-Tailwind-E-commerce/static/js/main.da5c37d1.js",
+    "main.js": "/React-Tailwind-E-commerce/static/js/main.c6851508.js",
     "static/media/woman_hero.png": "/React-Tailwind-E-commerce/static/media/woman_hero.d109717db264ec684e97.png",
     "static/media/bg_hero.svg": "/React-Tailwind-E-commerce/static/media/bg_hero.5b3a28da99dfd198982f.svg",
     "static/media/logo.svg": "/React-Tailwind-E-commerce/static/media/logo.7740ae04391d2ede26528c55d3b0102f.svg",
     "index.html": "/React-Tailwind-E-commerce/index.html",
     "main.503030f6.css.map": "/React-Tailwind-E-commerce/static/css/main.503030f6.css.map",
-    "main.da5c37d1.js.map": "/React-Tailwind-E-commerce/static/js/main.da5c37d1.js.map"
+    "main.c6851508.js.map": "/React-Tailwind-E-commerce/static/js/main.c6851508.js.map"
   },
   "entrypoints": [
     "static/css/main.503030f6.css",
-    "static/js/main.da5c37d1.js"
+    "static/js/main.c6851508.js"
   ]
 }
