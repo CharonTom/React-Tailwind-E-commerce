@@ -14,7 +14,7 @@ const App = () => {
         <Routes>
           <Route path="/React-Tailwind-E-commerce" element={<Home />} />
           <Route
-            path="/React-Tailwind-E-commerce/product/:id"
+            path="React-Tailwind-E-commerce/product/:id"
             element={<ProductDetails />}
           />
         </Routes>
