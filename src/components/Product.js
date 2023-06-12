@@ -15,7 +15,7 @@ const Product = ({ product }) => {
        overflow-hidden group transition"
       >
         <div className="w-full h-full flex justify-center items-center">
-          {/* image */}
+          {/* img */}
           <div className="w-[200px] mx-auto">
             <img
               className="max-h-[160px] mx-auto group-hover:scale-110 transition duration-300 "
