@@ -1,7 +1,8 @@
 # Ecommerce Website
 
-
+<p align="center">
 <img src="https://github.com/CharonTom/my-website/blob/main/src/assets/img/ecommerce.png" alt="application sur pc et mobile" width="500"/>
+</p>
 
 J'ai construit une petite application e-commerce avec React et TailwindCSS.
 L'objectif de cet exercice était d'apprendre à maîtriser la gestion de panier en utilisant le JSX offert par React. Il est possible d'ajouter un article au panier, d'augmenter sa quantité où bien de le vider.
